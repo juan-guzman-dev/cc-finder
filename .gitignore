@@ -1,0 +1,5 @@
+venv/
+proposal_and_schema/
+__pycache__/
+plaid_quickstart/
+.DS_Store

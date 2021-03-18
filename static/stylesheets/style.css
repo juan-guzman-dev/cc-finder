@@ -1,0 +1,390 @@
+/* ***************************************************************** */
+/* CREDIT CARD IMAGE AND APPY BUTTON*/
+
+img {
+	display: block;
+	width: auto;
+	min-height: auto;
+}
+
+.small-text {
+	font-size: xx-small;
+}
+
+/* ***************************************************************** */
+/* PAGINATION */
+
+.pagination {
+	margin: 0;
+}
+
+.pagination li:hover {
+	cursor: pointer;
+}
+
+.pagination-container {
+	width: 70%;
+	float: left;
+}
+.rows_count {
+	width: 20%;
+	margin-top: 1rem;
+	float: right;
+	text-align: right;
+	color: #999;
+}
+
+ul.pagination li.active {
+	background-color: #0275d8;
+	color: white;
+	border-radius: 5px;
+}
+
+ul.pagination li {
+	border-radius: 5px;
+}
+
+/* ***************************************************************** */
+/* FONT FAMILIES */
+
+body {
+	font-family: 'Oswald', sans-serif !important;
+}
+
+.brand {
+	font-family: 'Baloo Tamma 2', sans-serif !important;
+}
+
+.home {
+	font-family: 'Thasadith', sans-serif !important;
+}
+
+/* ***************************************************************** */
+/* MISCELLANEOUS */
+
+/* margin in 'more details' collabsible */
+li {
+	margin: 1em 0;
+}
+
+/* text size of main section */
+.custom-text-size {
+	font-size: 85%;
+}
+
+.starthidden {
+	display: none !important;
+}
+
+/* Popover Body */
+.popover-body {
+	font-size: 15px;
+}
+
+.container {
+	max-width: 1400px !important;
+}
+
+.myCards {
+	cursor: pointer;
+}
+
+.myCards:hover {
+	background-color: #c1e0f7;
+}
+
+#more-details {
+	cursor: pointer;
+}
+
+.left-column {
+	border-right: 1px solid lightgray;
+	font-size: 14px;
+}
+
+.right-column {
+	font-size: 14px;
+}
+
+.check-all {
+	font-size: 14px;
+}
+
+#mid-area {
+	border-top: 1px solid lightgray;
+}
+
+#top-text {
+	border-bottom: 1px solid white;
+}
+
+/* spend form labels */
+.label label {
+	font-size: 14px;
+	padding: 10px 0px 0px 0px; /*top right bottom left*/
+}
+
+.form-control-sm {
+	margin: -5px 0px 0px 0px; /*top right bottom left*/
+}
+
+/* ***************************************************************** */
+/* ARROW */
+
+.arrow {
+	position: relative;
+	font-size: 40px;
+	text-align: center;
+	/* transform: rotate(180deg); */
+	animation: bouncearrow 1s infinite;
+}
+
+.arrow:hover {
+	cursor: pointer;
+}
+
+@keyframes bouncearrow {
+	0% {
+		top: 0px; /* because it is a loop, we want the 0% and 100% values to be the same. 0px from the top*/
+	}
+	50% {
+		top: 10px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+div.parent {
+	position: relative;
+}
+div.absolute {
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	bottom: 10px;
+	margin-top: 420px;
+}
+
+/* ***************************************************************** */
+/* WATERMARK */
+
+.watermark {
+	position: relative;
+}
+
+.watermark:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url("/static/images/andrew-seaman-lzg7pY1ZhLo-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.1;
+}
+
+/* ***************************************************************** */
+/* SEARCH CARD BAR */
+
+#myInput {
+	height: 120%;
+	border-color: rgb(56, 97, 233);
+	font-size: 15px;
+}
+
+/* ***************************************************************** */
+/* HOME PAGE */
+
+.homeBtn {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	height: 70px;
+	line-height: 70px;
+	border: 2px solid rgb(2, 3, 43);
+	display: inline-block;
+	float: none;
+	text-align: center;
+	width: 200px;
+	padding: 0px !important;
+	font-size: 25px;
+	color: rgb(2, 3, 43);
+	border-radius: 25px;
+}
+
+.homeBtn:hover {
+	color: whitesmoke;
+	background: rgb(2, 3, 43);
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* ***************************************************************** */
+/* SPINNER */
+#loader {
+	border: 12px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 12px solid #444444;
+	width: 70px;
+	height: 70px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.center {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* ***************************************************************** */
+/* CHECKBOXES */
+
+.form-check-input {
+	width: 16px;
+	height: 16px;
+}
+
+.form-check-label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+/* ***************************************************************** */
+/* MEDIA QUERIES */
+
+/* If the screen size is 601px wide or more*/
+@media screen and (min-width: 601px) {
+	h1 {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.title_h1 {
+		font-size: 60px;
+	}
+
+	.title_h3 {
+		font-size: 25px;
+	}
+
+	footer {
+		font-size: 14px;
+	}
+}
+
+/* On screens that are 992px wide or less*/
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 35px;
+		font-weight: 600;
+	}
+
+	.title_h1 {
+		font-size: 50px;
+	}
+
+	.title_h3 {
+		font-size: 22px;
+	}
+
+	.homeBtn {
+		height: 60px;
+		line-height: 60px;
+		width: 190px;
+		font-size: 22px;
+		border-radius: 22px;
+	}
+
+	footer {
+		font-size: 12px;
+	}
+
+	.label label {
+		font-size: 13px;
+	}
+}
+
+/* If the screen size is 600px wide or less*/
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 30px;
+		font-weight: 600;
+	}
+
+	.title_h1 {
+		font-size: 40px;
+	}
+
+	.title_h3 {
+		font-size: 19px;
+	}
+
+	.homeBtn {
+		height: 50px;
+		line-height: 50px;
+		width: 180px;
+		font-size: 20px;
+		border-radius: 20px;
+	}
+
+	.arrow {
+		font-size: 30px;
+	}
+
+	@keyframes bouncearrow {
+		0% {
+			top: 0px; /* because it is a loop, we want the 0% and 100% values to be the same. 0px from the top*/
+		}
+		50% {
+			top: 5px;
+		}
+		100% {
+			top: 0px;
+		}
+	}
+
+	div.absolute {
+		margin-top: 435px;
+	}
+
+	right-column {
+		font-size: 11px;
+	}
+
+	.left-column {
+		font-size: 15px;
+	}
+
+	footer {
+		font-size: 12px;
+	}
+
+	.label label {
+		font-size: 11px;
+	}
+
+	tr.collapse {
+		overflow-x: auto;
+		display: block;
+	}
+}

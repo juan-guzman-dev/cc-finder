@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Main -->
+
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: rgb(2, 3, 43);">
+	<div class="container d-flex flex-column flex-md-row align-items-center px-md-5">
+		<a class="navbar-brand pt-2" href="#">
+			<!-- <i class="far fa-credit-card fa-2x"></i> -->
+			<span class="brand" style="font-size: 40px; color:whitesmoke"><span
+					style="color:lightskyblue">rewards</span>cards<span style="color:lightskyblue">.</span></span>
+		</a>
+	</div>
+</nav>
+<nav class="navbar navbar-expand navbar-light shadow-sm watermark parent"
+	style="background-color:lightskyblue; color:  rgb(2, 3, 43); height: 500px">
+	<div class="container">
+		<div class="row pl-2 pl-lg-5">
+			<div class="col-12 home">
+				<h1 class="title_h1">Meeteeeeee <span class="brand">rewardscards.</span></h1>
+			</div>
+			<div class="col-12 col-lg-6 home">
+				<h3 class="title_h3" ;">An independent and straightforward app that helps you find a credit card that
+					maximizes the rewards dollar value of your everyday spending habits.</h3>
+				<a class="mt-4 brand homeBtn" href="/credit-cards" role="button">Find Your Card</a>
+			</div>
+		</div>
+	</div>
+	<div class="arrow absolute pr-4">
+		<a href="#slides" style="color: rgb(2, 3, 43);"> &#8659;</a>
+	</div>
+
+</nav>
+<div class="container border mt-4" id="slides">
+	<div class="row no-gutters">
+		<div class="col-12 no-gutters" style="height: 630px;">
+			<!-- <iframe allowfullscreen="allowfullscreen" frameborder="no" width="1120" height="630" src="https://app.wideo.co/embed/30232851597271957203?width=560&height=315&repeat=true&autoplay=true"></iframe> -->
+			<iframe allowfullscreen="allowfullscreen" frameborder="no" width="1120" height="630"
+				src="https://app.wideo.co/embed/30232851597271957203?width=1120&height=630&repeat=false&autoplay=false"></iframe>
+		</div>
+	</div>
+</div>
+
+
+<!-- End Main -->
+
+{% endblock %}
