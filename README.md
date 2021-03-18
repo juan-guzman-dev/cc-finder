@@ -1,5 +1,5 @@
 ## Project Name
-### Credit Card Finder Web App  
+**Credit Card Finder Web App**
 
 
 ## Case Description
