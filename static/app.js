@@ -949,7 +949,8 @@ $(function () {
 		// hide send form message
 		$submitMsg.hide();
 		// display form submitted message
-		$('#submittedMsg').show();
+		// $('#submittedMsg').show();
+		$('#submittedMsg').removeClass('d-none')
 		$('#submittedMsg').fadeTo(3000, 500).slideUp(500, function () {
 			$('#submittedMsg').slideUp(500);
 		});
@@ -1079,7 +1080,7 @@ $(document).ready(function () {
 	var $button = $('#form-section-btn');
 
 	function containerHidden() {
-		return $container.hasClass('starthidden');
+		return $container.hasClass('d-none');
 	}
 
 	function updateButtonStatus() {
@@ -1087,7 +1088,7 @@ $(document).ready(function () {
 	}
 
 	function handleButtonClick() {
-		containerHidden() ? $container.removeClass('starthidden') : $container.attr('class', 'starthidden container');
+		containerHidden() ? $container.removeClass('d-none') : $container.attr('class', 'container d-none');
 		containerHidden()
 			? $button.find('i').addClass('fa-chevron-down').removeClass('fa-chevron-up')
 			: $button.find('i').addClass('fa-chevron-up').removeClass('fa-chevron-down');
@@ -1109,11 +1110,11 @@ $(document).ready(function () {
 	});
 
 	// On page load
-	if (spendFormValues['containerState'] === true) {
-		$container.attr('class', 'starthidden container');
-	} else {
-		$container.removeClass('starthidden');
-	}
+	// if (spendFormValues['containerState'] === true) {
+	// 	$container.attr('class', 'container d-none');
+	// } else {
+	// 	$container.removeClass('d-none');
+	// }
 	$button.find('span').text(spendFormValues['buttonText']);
 	$button.find('i').attr('class', spendFormValues['fasIcon']);
 });
