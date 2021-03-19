@@ -700,7 +700,7 @@ $(document).ready(function () {
 			firstYearRewards[this.id] = $(this).find('td:eq(2)').html();
 		});
 		firstYearRewards['msg'] = columnHidden();
-		console.log(firstYearRewards);
+		// console.log(firstYearRewards);
 		localStorage.setItem('firstYearRewards', JSON.stringify(firstYearRewards));
 	}
 
@@ -726,9 +726,10 @@ $(document).ready(function () {
 			supermarket: $('input[name=supermarket]').val().replace(/\$|,/g, '') || 0,
 			utility: $('input[name=utility]').val().replace(/\$|,/g, '') || 0
 		};
-		// url: 'http://127.0.0.1:5000/credit-cards',
+
 		$.ajax({
 			url: 'https://cc-finder.herokuapp.com/credit-cards',
+			// url: 'http://127.0.0.1:5000/credit-cards',
 			type: 'post',
 			data: formData,
 			success: function (d) {
@@ -752,6 +753,10 @@ $(document).ready(function () {
 					let $everywherePts = parseFloat($(this).find('#everywhere_pts').text());
 					// gather signup bonus and annual fee
 					let $signupBonus = parseFloat($(this).find('.signup-bonus').text().replace(',', '')); // remove comma
+					let $rewardType = $(this).find('#reward_type').text()
+					if ($rewardType === "Cash Rewards") {
+						$signupBonus = $signupBonus * 100 // multiply by 100 to offset row 922
+					}
 					let $annualFee = parseFloat($(this).find('#annual_fee').text().replace('$', '')); // remove Dollar sign
 
 					let $totalSpend =
@@ -1106,8 +1111,8 @@ $(document).ready(function () {
 		handleButtonClick();
 		updateButtonStatus();
 		updateStorage();
-		console.log(spendFormValues);
-		console.log($container.attr('class'));
+		// console.log(spendFormValues);
+		// console.log($container.attr('class'));
 	});
 
 	// On page load
@@ -1157,14 +1162,14 @@ $(document).ready(function () {
 
 	$button.on('click', function () {
 		updateStorage();
-		console.log(spendFormValues);
+		// console.log(spendFormValues);
 	});
 
 	// On page load
 	$.each(spendFormValues, function (key, value) {
 		$('#' + key).val(value);
 	});
-	console.log(spendFormValues);
+	// console.log(spendFormValues);
 	$result.html(spendFormValues['result']);
 });
 
@@ -1188,7 +1193,7 @@ $(document).ready(function () {
 	});
 });
 
-/*      
+/*
 On page load, check display status of spendContainer
 */
-console.log($('#spendContainer').attr('class'));
+// console.log($('#spendContainer').attr('class'));
