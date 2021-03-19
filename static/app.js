@@ -377,26 +377,27 @@ $(function () {
 /*
 Alert if all banks checkboxes unchecked
 */
-$(function () {
-	$btn = $('#filter');
-	$btn.on('click', function (evt) {
-		if ($('.banks:checked').length === 0) {
-			alert('Please select a credit card company.');
-		}
-	});
-});
+// $(function () {
+// 	$btn = $('#filter');
+// 	$btn.on('click', function (evt) {
+// 		if ($('.banks:checked').length === 0) {
+// 			alert('Please select a credit card company.');
+// 		}
+// 	});
+// 	return
+// });
 
 /*
 Alert if all earn categories checkboxes unchecked
 */
-$(function () {
-	$btn = $('#filter');
-	$btn.on('click', function (evt) {
-		if ($('.earns:checked').length === 0) {
-			alert('Please select an earning category.');
-		}
-	});
-});
+// $(function () {
+// 	$btn = $('#filter');
+// 	$btn.on('click', function (evt) {
+// 		if ($('.earns:checked').length === 0) {
+// 			alert('Please select an earning category.');
+// 		}
+// 	});
+// });
 
 /*      'BANKS' CHECKBOXES
 - Persist form values to local storage
@@ -417,7 +418,7 @@ $(document).ready(function () {
 	}
 
 	function handleWarningMsg() {
-		allUnchecked() ? $warning_msg.show() : $warning_msg.hide();
+		allUnchecked() ? $warning_msg.removeClass('d-none') : $warning_msg.addClass('d-none');
 	}
 
 	function updateButtonStatus() {
@@ -429,7 +430,7 @@ $(document).ready(function () {
 	}
 
 	function warningMsgState() {
-		if ($warning_msg.css('display') === 'none') {
+		if ($warning_msg.hasClass('d-none')) {
 			return 'hidden';
 		} else {
 			return 'visible';
@@ -466,9 +467,9 @@ $(document).ready(function () {
 		$('#' + key).prop('checked', value);
 	});
 	if (banksFormValues['msg'] === 'visible') {
-		$warning_msg.show();
+		$warning_msg.removeClass('d-none');
 	} else {
-		$warning_msg.hide();
+		$warning_msg.addClass('d-none');
 	}
 	$button.text(banksFormValues['buttonText']);
 });
@@ -492,7 +493,7 @@ $(document).ready(function () {
 	}
 
 	function handleWarningMsg() {
-		allUnchecked() ? $warning_msg.show() : $warning_msg.hide();
+		allUnchecked() ? $warning_msg.removeClass('d-none') : $warning_msg.addClass('d-none');
 	}
 
 	function updateButtonStatus() {
@@ -504,7 +505,7 @@ $(document).ready(function () {
 	}
 
 	function warningMsgState() {
-		if ($warning_msg.css('display') === 'none') {
+		if ($warning_msg.hasClass('d-none')) {
 			return 'hidden';
 		} else {
 			return 'visible';
@@ -541,9 +542,9 @@ $(document).ready(function () {
 		$('#' + key).prop('checked', value);
 	});
 	if (earnsFormValues['msg'] === 'visible') {
-		$warning_msg.show();
+		$warning_msg.removeClass('d-none');
 	} else {
-		$warning_msg.hide();
+		$warning_msg.addClass('d-none');
 	}
 	$button.text(earnsFormValues['buttonText']);
 });
@@ -616,7 +617,7 @@ $(document).ready(function () {
 	}
 
 	function handleWarningMsg() {
-		allUnchecked() ? $warning_msg.show() : $warning_msg.hide();
+		allUnchecked() ? $warning_msg.removeClass('d-none') : $warning_msg.addClass('d-none');
 	}
 
 	function updateButtonStatus() {
@@ -628,7 +629,7 @@ $(document).ready(function () {
 	}
 
 	function warningMsgState() {
-		if ($warning_msg.css('display') === 'none') {
+		if ($warning_msg.hasClass('d-none')) {
 			return 'hidden';
 		} else {
 			return 'visible';
@@ -665,9 +666,9 @@ $(document).ready(function () {
 		$('#' + key).prop('checked', value);
 	});
 	if (programsFormValues['msg'] === 'visible') {
-		$warning_msg.show();
+		$warning_msg.removeClass('d-none');
 	} else {
-		$warning_msg.hide();
+		$warning_msg.addClass('d-none');
 	}
 	$button.text(programsFormValues['buttonText']);
 });
